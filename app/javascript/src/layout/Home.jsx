@@ -1,11 +1,17 @@
 import React from "react";
+import Header from "../compoment/Header";
+import UrlList from "../compoment/UrlList";
+import InputBar from "../compoment/InputBar";
+import "semantic-ui-css/semantic.min.css";
 
-const Home = () => {
+function Home(props) {
   return (
-    <div>
-      this is a home component <div className="bg-yellow-700">Home page</div>
+    <div className="bg-blue-100 min-h-screen">
+      <Header />
+      <InputBar />
+      <UrlList />
     </div>
   );
-};
+}
 
 export default Home;
