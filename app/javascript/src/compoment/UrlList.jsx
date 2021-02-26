@@ -2,7 +2,7 @@ import React from "react";
 import { Table } from "semantic-ui-react";
 import UrlCard from "./UrlCard";
 
-function UrlList(props) {
+function UrlList({ urls }) {
   return (
     <div className="w-3/5 flex mx-auto">
       <Table celled compact definition>
@@ -16,11 +16,9 @@ function UrlList(props) {
         </Table.Header>
 
         <Table.Body>
-          <UrlCard />
-          <UrlCard />
-          <UrlCard />
-          <UrlCard />
-          <UrlCard />
+          {urls.map(url => (
+            <UrlCard key={url.id} url={url} />
+          ))}
         </Table.Body>
       </Table>
     </div>
