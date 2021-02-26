@@ -9,7 +9,7 @@ class UrlsController < ApplicationController
 
   def create 
     @url = Url.new(url_params)
-    @url.slug = Url.generate_slug
+    @url.shorten_url
     if @url.save
       render status: :ok, json: { notice: "Link shorten successfully" } 
     else 
