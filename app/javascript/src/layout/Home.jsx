@@ -40,7 +40,7 @@ function Home(props) {
     <div className="bg-blue-100 min-h-screen">
       <Header />
       <InputBar handleSubmit={handleSubmit} />
-      <UrlList urls={urls} />
+      <UrlList urls={urls} fetchUrls={fetchUrls} />
     </div>
   );
 }
