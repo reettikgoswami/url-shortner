@@ -4,4 +4,8 @@ class Url < ApplicationRecord
   validates :slug, presence: true, uniqueness: true
   validates :clicks, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
+
+  def Url.generate_slug 
+     SecureRandom.urlsafe_base64
+  end
 end
